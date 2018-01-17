@@ -7,8 +7,8 @@ require(survival)
 require(rms)
 require(riskRegression)
 require(pec)
-if (file.exists("./recc.RData")){
-    recc <- get(load("./recc.RData"))
+if (file.exists("../data/recc.RData")){
+    recc <- get(load("../data/recc.RData"))
     setDT(recc)
     recc[,status:=1*(DF.Status!=0)]
     recc <- na.omit(recc)
